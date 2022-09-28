@@ -1,10 +1,10 @@
 ---
 - name: test out community.general.mail
-  hosts: all
-
+  hosts: localhost
+  gather_facts: true
   tasks:
-  - name: Example playbook sending mail to root
-    community.general.mail:
-      subject: Test from Community General Mail Module
-      secure: never
-    delegate_to: localhost
+    - name: Example playbook sending mail to root
+      community.general.mail:
+        host: mail
+        port: 25
+        subject: Test community.general mail from {{ ansible_hostname }}
