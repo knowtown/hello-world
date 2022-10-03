@@ -8,6 +8,7 @@
         host: mail
         port: 25
         subject: Test community.general mail from {{ ansible_hostname }}
+        body: The email from community.general.mail is working from container {{ ansible_hostname }} on {{ inventory_hostname }}
     - name: Example task to send external email
       community.general.mail:
         host: mail
