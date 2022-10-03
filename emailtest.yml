@@ -13,6 +13,6 @@
         host: mail
         port: 25
         subject: Email Knowtown-AAP community.general.mail 
-        body: The email fromcommunity.general.mail is working
+        body: The email fromcommunity.general.mail is working from {{ ansible_hostname }}
         to: James Mills <jmills@knowtown.com>
         subtype: html
